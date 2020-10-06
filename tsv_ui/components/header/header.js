@@ -1,10 +1,5 @@
-import {
-  Grid,
-  Button,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+import { Grid, Button, Toolbar, Typography } from "@material-ui/core";
+import IconButton from '@material-ui/core/IconButton';
 import AppBar from "@material-ui/core/AppBar";
 import "./header.module.css";
 
@@ -12,23 +7,33 @@ export const Header = () => {
   return (
     <AppBar position="static" color="transparent">
       <Toolbar>
-        <Grid container justify="space-between" direction="row">
-          <Grid item xs={2}>
-            {/* empty item for spacing... getting title in the middle */}
-            
-          </Grid>
-          <Grid item>
-            <Typography color="inherit" variant="h3">
-              Title... will it center?
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Grid container justify="column" spacing={2}>
-              <Grid item xs={6} s={12}>
-                <Button>REGISTER</Button>
+        <Grid container justify="center">
+          <Grid item xs={11}>
+            <Grid container justify="center" align="center" spacing={2}>
+              <Grid item xs={12}>
+                <Typography color="inherit" variant="h3">
+                  The Silicate Valley
+                </Typography>
               </Grid>
-              <Grid item xs={6} s={12}>
-                <Button>LOG IN</Button>
+              <Grid item xs={12}>
+                <Typography variant="subtitle1">
+                  On the hemorrhaging edge of tech news
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={1}>
+            <Grid container justify="center" align="center" spacing={1}>
+              <Grid item>
+                <Button variant="contained" color="secondary">
+                  REGISTER
+                </Button>
+              </Grid>
+              <Grid item>
+                <Button variant="outlined" color="primary">
+                  LOGIN
+                </Button>
               </Grid>
             </Grid>
           </Grid>

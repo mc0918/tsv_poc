@@ -17,7 +17,7 @@ const IndexPage = () => {
     <>
       <Header />
       {/* <Clock /> */}
-      <Counter />
+      {/* <Counter /> */}
     </>
   )
 }
