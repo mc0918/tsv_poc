@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux'
 
 import Clock from '../components/clock'
 import Counter from '../components/counter'
-import { Header } from '../components/header'
+import { Header } from '../components/header/header'
 import { tick } from '../lib/slices/clockSlice'
 import useInterval from '../lib/useInterval'
 
