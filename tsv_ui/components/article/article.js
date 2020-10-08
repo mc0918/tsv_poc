@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core";
 
-export const article = (title, author, date, image, body) => {
+export const Article = (title, author, date, image, body) => {
   <Grid container spacing={2}>
     <Grid item xs={12}>
       <title>{title}</title>

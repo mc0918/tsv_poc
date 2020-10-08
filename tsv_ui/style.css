@@ -1,3 +1,41 @@
 body {
-    margin: 0;
+  margin: 0;
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  overflow-y: scroll;
+}
+
+footer {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#header-container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#login-container{
+    position: absolute; 
+    z-index: 1;
+    padding-left: 80%;
+}
+
+#page-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 2.5rem;
+}
+
+#footer-container {
+  border-top: 3px solid #fbb03b;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100% !important;
+  height: 100px !important ;
+  background: #eaeaea;
 }
