@@ -1,11 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-
-import Clock from "../components/clock";
-import Counter from "../components/counter";
 import { Footer } from "../components/footer/footer";
 import { Header } from "../components/header/header";
-import { tick } from "../lib/slices/clockSlice";
 import useInterval from "../lib/useInterval";
 import ArticlePage from "./articlePage";
 
