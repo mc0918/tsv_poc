@@ -48,7 +48,7 @@ export const Header = () => {
             </div> */}
 
           <div id="login-container" style={{ position: "absolute", zIndex: 1, paddingLeft: "80%" }}>
-            <Grid container xs={12}>
+            <Grid container>
               <Grid container justify="center" align="center" spacing={1}>
                 <Grid item>
                   <Button variant="contained" color="secondary">
