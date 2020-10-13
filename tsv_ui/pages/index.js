@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Footer } from "../components/footer/footer";
 import { Header } from "../components/header/header";
 import useInterval from "../lib/useInterval";
-import ArticlePage from "./articlePage";
+import ArticleGrid from '../components/articleGrid/articleGrid'
 
 const IndexPage = () => {
   // const dispatch = useDispatch()
@@ -17,7 +17,7 @@ const IndexPage = () => {
       <div id="container">
         <Header />
         <div id="page-container">
-          <ArticlePage />
+          <ArticleGrid />
         </div>
         <div id="footer-container">
           <Footer />

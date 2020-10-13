@@ -1,5 +1,5 @@
 import { Grid } from "@material-ui/core";
-import { ArticlePreview } from "../components/articlePreview/articlePreview";
+import { ArticlePreview } from "../articlePreview/articlePreview";
 
 const titles = [
   "bad things happening where you don't live",
@@ -32,9 +32,13 @@ let articleList = titles.map((article) => {
   );
 });
 
-const ArticlePage = () => {
+//TODO make the navigation bar thing and title change based on category (hot, recent, etc)
+// should it be its own component?
+const ArticleGrid = (props) => {
   return (
     <div>
+      <p>home&gt;categories&gt;all</p>
+      <h1>Title</h1>
       <Grid container justify="center" spacing={2}>
         <Grid item xs={12} sm={8}>
           <Grid container>{articleList}</Grid>
@@ -49,4 +53,4 @@ const ArticlePage = () => {
   );
 };
 
-export default ArticlePage;
+export default ArticleGrid;
