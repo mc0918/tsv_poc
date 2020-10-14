@@ -1,18 +1,19 @@
-body {
+  body {
   margin: 0;
-  min-height: 100vh; /* will cover the 100% of viewport */
+  min-height: 100vh; 
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 100px; /* height of your footer */
+  padding-bottom: 100px; 
   overflow-y: scroll;
 }
+
 
 footer {
   margin-left: 10%;
   margin-right: 10%;
 }
-
+  
 #header-container {
   margin-left: 10%;
   margin-right: 10%;
@@ -28,6 +29,7 @@ footer {
 #page-container {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 5%;
   padding-bottom: 2.5rem;
 }
 

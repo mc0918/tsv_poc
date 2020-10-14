@@ -36,20 +36,13 @@ let articleList = titles.map((article) => {
 // should it be its own component?
 const ArticleGrid = (props) => {
   return (
-    <div>
+    <Grid item xs={12}>
       <p>home&gt;categories&gt;all</p>
       <h1>Title</h1>
-      <Grid container justify="center" spacing={2}>
-        <Grid item xs={12} sm={8}>
-          <Grid container>{articleList}</Grid>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Grid container>
-            <div>suh</div>
-          </Grid>
-        </Grid>
+      <Grid container justify="flex-start" spacing={2}>
+        {articleList}
       </Grid>
-    </div>
+    </Grid>
   );
 };
 

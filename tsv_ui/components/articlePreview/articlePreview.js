@@ -22,6 +22,7 @@ const useStyles = makeStyles({
       backgroundSize: '120% 120%'
     // "& element": {color: 'yellow'} for the genre text that changes color when hovering the article
     },
+    transition: '0.2s'
   },
   text: {
     fontFamily: "sans-serif",
@@ -37,10 +38,10 @@ const useStyles = makeStyles({
 
 //props needed: title, image, href, author, date, category, comments(?)
 export const ArticlePreview = (props) => {
-  const styles = useStyles({ image: props.image });
+  const styles = useStyles();
 
   return (
-    <Box className={styles.root}>
+    <Box classes={{root: styles.root}}>
       <a href="/notes">
         <CardMedia
           classes={{ root: styles.img }}
