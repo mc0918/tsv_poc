@@ -19,10 +19,10 @@ const IndexPage = () => {
         <Header />
         <div id="page-container">
           <Grid container>
-            <Grid item xs={8}>
+            <Grid item xs={12} sm={12} md={12} lg={8}>
               <ArticleGrid />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={12} md={12} lg={4}>
               <Sidebar />
             </Grid>
           </Grid>

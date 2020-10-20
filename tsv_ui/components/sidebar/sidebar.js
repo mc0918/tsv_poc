@@ -2,11 +2,9 @@ import { Avatar, Box, makeStyles, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-      border: '3px solid green'
+    border: "3px solid green",
   },
-  avatar: {
-    
-  },
+  avatar: {},
 });
 
 export const Sidebar = () => {
@@ -14,8 +12,12 @@ export const Sidebar = () => {
 
   return (
     <Box classes={{ root: styles.root }}>
-        <Grid container justify='center'></Grid>
-        <Avatar classes={{ root: styles.avatar }}>H</Avatar>
+      <Grid container justify="center">
+        <Avatar classes={{ root: styles.avatar }}>S</Avatar>
+        <Grid item xs={12}>
+          <div>email</div>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
