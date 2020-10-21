@@ -7,8 +7,23 @@ import {
   Tabs,
 } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
+import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Header = () => {
+  const [tabValue, setTabValue] = useState(0);
+  const router = useRouter();
+
+  const handleChange = (event, newValue) => {
+    setTabValue(newValue);
+  };
+
+  const handleClick = href => (event) => {
+    event.preventDefault();
+    router.push(href)
+  }
+
   return (
     <AppBar position="static" color="transparent">
       <div id="header-container">
@@ -47,7 +62,10 @@ export const Header = () => {
             </Grid>
             </div> */}
 
-          <div id="login-container" style={{ position: "absolute", zIndex: 1, paddingLeft: "80%" }}>
+          <div
+            id="login-container"
+            style={{ position: "absolute", zIndex: 1, paddingLeft: "80%" }}
+          >
             <Grid container>
               <Grid container justify="center" align="center" spacing={1}>
                 <Grid item>
@@ -67,14 +85,19 @@ export const Header = () => {
 
         <div style={{ textAlign: "center" }}>
           <Tabs //TODO: value 0 means only item 1 will ever be selected
-            value={0}
-            onChange={null}
+            value={tabValue}
+            onChange={handleChange}
             aria-label="simple tabs example"
             centered={true}
           >
-            <Tab label="Item One" />
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+            {/* <Link href="/notes"> */}
+            <Tab
+              label="Latest"
+              onClick={handleClick('/notes')}
+            />
+            {/* </Link> */}
+            <Tab label="Top" onClick={handleClick('/notes')}/>
+            <Tab label="Categories" />
           </Tabs>
         </div>
       </div>

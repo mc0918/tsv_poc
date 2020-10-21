@@ -17,6 +17,12 @@ export const Sidebar = () => {
         <Grid item xs={12}>
           <div>email</div>
         </Grid>
+        <Grid item xs={12}>
+          <div>sign up button</div>
+        </Grid>
+        <Grid item xs={12}>
+          <div>little flavor text for ya</div>
+        </Grid>
       </Grid>
     </Box>
   );
