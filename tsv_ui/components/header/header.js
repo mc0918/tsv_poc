@@ -84,7 +84,7 @@ export const Header = () => {
         </Toolbar>
 
         <div style={{ textAlign: "center" }}>
-          <Tabs //TODO: value 0 means only item 1 will ever be selected
+          <Tabs
             value={tabValue}
             onChange={handleChange}
             aria-label="simple tabs example"

@@ -22,6 +22,7 @@ const titles = [
   "Gamers DDOS ACLU over CS:GO",
   "You'll never guess what we wrote about now",
   "Orange you glad there's no more headlines?",
+  
 ];
 
 let articleList = titles.map((article) => {
