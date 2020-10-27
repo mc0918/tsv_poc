@@ -12,6 +12,9 @@ const IndexPage = () => {
   // useInterval(() => {
   //   dispatch(tick({ light: true, lastUpdate: Date.now() }))
   // }, 1000)
+  const fetchArticles = () => {
+    
+  }
 
   return (
     <React.Fragment>

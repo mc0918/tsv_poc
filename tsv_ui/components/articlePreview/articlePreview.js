@@ -4,6 +4,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
+import Link from 'next/link';
 
 const useStyles = makeStyles({
   root: {
@@ -37,7 +38,7 @@ const useStyles = makeStyles({
     top: "50%",
     right: "50%",
     transform: "translate(50%, 50%)",
-    
+
   },
 });
 
@@ -47,7 +48,8 @@ export const ArticlePreview = (props) => {
 
   return (
     <Box classes={{root: styles.root}}>
-      <a href="/notes">
+      <Link href="/article" passHref>
+      <a>
         <CardMedia
           classes={{ root: styles.img }}
           style={{
@@ -57,6 +59,7 @@ export const ArticlePreview = (props) => {
           <h5 className={styles.text}>{props.title}</h5>
         </CardMedia>
       </a>
+      </Link>
     </Box>
   );
 };
