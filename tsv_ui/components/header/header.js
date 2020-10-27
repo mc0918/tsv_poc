@@ -11,9 +11,11 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const Header = () => {
+export const Header = (props) => {
   const [tabValue, setTabValue] = useState(0);
   const router = useRouter();
+
+  //TODO: will need function to set/track tabValue when switching page -> send via props? or via redux?
 
   const handleChange = (event, newValue) => {
     setTabValue(newValue);

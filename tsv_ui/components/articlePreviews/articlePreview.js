@@ -6,7 +6,7 @@ import {
 } from "@material-ui/core";
 import Link from 'next/link';
 
-const useStyles = makeStyles({
+const stylesheet = {
   root: {
     // height: "171px",
     // width: "300px",
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     marginRight: '-25px',
     position: "relative",
   },
-  img: {
+  image: {
     backgroundSize: "100% 100%",
     width: "100%",
     height: "100%",
@@ -38,9 +38,10 @@ const useStyles = makeStyles({
     top: "50%",
     right: "50%",
     transform: "translate(50%, 50%)",
-
   },
-});
+}
+
+const useStyles = makeStyles(stylesheet);
 
 //props needed: title, image, href, author, date, category, comments(?)
 export const ArticlePreview = (props) => {
@@ -51,11 +52,12 @@ export const ArticlePreview = (props) => {
       <Link href="/article" passHref>
       <a>
         <CardMedia
-          classes={{ root: styles.img }}
+          classes={{ root: styles.image }}
           style={{
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(${props.image})`,
           }}
         >
+          {/* <h5 style={stylesheet.text}>{props.title}</h5> */}
           <h5 className={styles.text}>{props.title}</h5>
         </CardMedia>
       </a>

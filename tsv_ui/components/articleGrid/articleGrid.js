@@ -1,5 +1,5 @@
 import { Grid } from "@material-ui/core";
-import { ArticlePreview } from "../articlePreview/articlePreview";
+import { ArticlePreview } from "../articlePreviews/articlePreview";
 
 const titles = [
   "bad things happening where you don't live",
