@@ -22,12 +22,11 @@ const titles = [
   "Gamers DDOS ACLU over CS:GO",
   "You'll never guess what we wrote about now",
   "Orange you glad there's no more headlines?",
-  
 ];
 
 let articleList = titles.map((article) => {
   return (
-    <Grid item key={article} xs={12} sm={6}>
+    <Grid item key={article} xs={12} sm={6} style={{ marginRight: "-25px" }}>
       <ArticlePreview title={article} image="/stoat.jpg" />
     </Grid>
   );
@@ -38,9 +37,8 @@ let articleList = titles.map((article) => {
 const ArticleGrid = (props) => {
   return (
     <Grid item xs={12}>
-      <p>home&gt;categories&gt;all</p>
-      <h1>Title</h1>
-      <Grid container justify="flex-start" spacing={2}>
+      
+      <Grid container justify="center" spacing={0}>
         {articleList}
       </Grid>
     </Grid>

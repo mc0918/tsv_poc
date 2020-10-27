@@ -19,10 +19,10 @@ export const Header = () => {
     setTabValue(newValue);
   };
 
-  const handleClick = href => (event) => {
+  const handleClick = (href) => (event) => {
     event.preventDefault();
-    router.push(href)
-  }
+    router.push(href);
+  };
 
   return (
     <AppBar position="static" color="transparent">
@@ -91,13 +91,11 @@ export const Header = () => {
             centered={true}
           >
             {/* <Link href="/notes"> */}
-            <Tab
-              label="Latest"
-              onClick={handleClick('/notes')}
-            />
+            <Tab label="Latest" onClick={handleClick("/notes")} />
             {/* </Link> */}
-            <Tab label="Top" onClick={handleClick('/notes')}/>
+            <Tab label="Top" onClick={handleClick("/notes")} />
             <Tab label="Categories" />
+            <Tab label="Submit" onClick={handleClick("/notes")} />
           </Tabs>
         </div>
       </div>

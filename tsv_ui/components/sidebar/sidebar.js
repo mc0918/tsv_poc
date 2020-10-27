@@ -10,10 +10,12 @@ import {
 const useStyles = makeStyles({
   root: {
     border: "3px solid green",
+    marginTop: '75px',
   },
   avatar: {
     textAlign: "center",
     marginTop: '-19px',
+
   },
 });
 

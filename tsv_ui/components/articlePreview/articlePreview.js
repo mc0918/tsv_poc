@@ -7,10 +7,14 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    height: "171px",
-    width: "300px",
+    // height: "171px",
+    // width: "300px",
+    height: '200px',
+    width: '90%',
     overflow: "hidden",
-    margin: "10px 0 10px 0",
+    // margin: "10px 0 10px 0",
+    margin: "10px 0 0 0",
+    marginRight: '-25px',
     position: "relative",
   },
   img: {

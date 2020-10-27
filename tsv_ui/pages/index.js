@@ -18,8 +18,12 @@ const IndexPage = () => {
       <div id="container">
         <Header />
         <div id="page-container">
-          <Grid container>
+          <Grid container spacing={0}>
             <Grid item xs={12} sm={12} md={12} lg={8}>
+              <div style={{width: '100%'}}>
+                <p style={{marginLeft: '25px'}}>home&gt;categories&gt;all</p>
+                <h1 style={{marginLeft: '25px'}}>Title</h1>
+              </div>
               <ArticleGrid />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={4}>
