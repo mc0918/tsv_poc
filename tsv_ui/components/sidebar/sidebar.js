@@ -7,6 +7,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { ArticleThumbnail } from "../articlePreviews/articleThumbnail";
+import { titles } from '../articleGrid/articleGrid';
 
 const useStyles = makeStyles({
   root: {
@@ -29,6 +30,22 @@ const useStyles = makeStyles({
 export const Sidebar = () => {
   const styles = useStyles();
   const centeredStyling = { margin: "3% 5% 0 5%", textAlign: "center" };
+
+  const mustReadArticles = titles.slice(0,4).map((article) => {
+    return (
+      <Grid item key={article} xs={12} sm={6} style={{ marginRight: "-25px" }}>
+        <ArticleThumbnail title={article} image="/stoat.jpg" isVertical={true}/>
+      </Grid>
+    );
+  });
+  const dontMissArticles = titles.slice(5,11).map((article) => {
+    return (
+      <Grid item key={article} xs={12} sm={6} style={{ marginRight: "-25px" }}>
+        <ArticleThumbnail title={article} image="/stoat.jpg" isVertical={false}/>
+      </Grid>
+    );
+  });
+
 
   return (
     <Box classes={{ root: styles.root }}>
@@ -62,13 +79,16 @@ export const Sidebar = () => {
             <div className={styles.subHeadings}>
               <h2>Must Read</h2>
               <Grid item>
-                <ArticleThumbnail />
+                {mustReadArticles}
               </Grid>
             </div>
           </Grid>
           <Grid item xs={12}>
             <div className={styles.subHeadings}>
               <h2>Don't Miss</h2>
+              <Grid item>
+                {dontMissArticles}
+              </Grid>
             </div>
           </Grid>
         </Grid>

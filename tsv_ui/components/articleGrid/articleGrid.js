@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import { ArticlePreview } from "../articlePreviews/articlePreview";
 
-const titles = [
+export const titles = [
   "bad things happening where you don't live",
   "clam invasion",
   "top 10 safest cars to be hit by",
