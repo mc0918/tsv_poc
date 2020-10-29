@@ -39,6 +39,7 @@ const stylesheet = {
     right: "50%",
     transform: "translate(50%, 50%)",
   },
+  
 }
 
 const useStyles = makeStyles(stylesheet);

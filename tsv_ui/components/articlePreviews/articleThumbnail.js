@@ -3,17 +3,23 @@ import Link from "next/link";
 
 const stylesheet = {
   verticalImage: {
-    width: "100px",
-    height: "200px",
-
+    width: "100%",
+    height: "150px",
   },
+  text: {
+    fontFamily: "sans-serif",
+    color: "black",
+    textTransform: "uppercase",
+    margin: 0,
+    width: '100%' 
+  },
+
 };
 
 const useStyles = makeStyles(stylesheet);
 
-export const ArticleThumbnail = (props) => {
+export const ArticleThumbnail = (props) => { 
   const styles = useStyles();
-  console.log(props.isVertical)
 
   //going to have a vertical and horizontal thumbnail determined by props
   return (props.isVertical ? (
@@ -27,8 +33,8 @@ export const ArticleThumbnail = (props) => {
           }}
         >
           {/* <h5 style={stylesheet.text}>{props.title}</h5> */}
-          <h5 className={styles.text}>{props.title}</h5>
         </CardMedia>
+          <h5 className={styles.text}>{props.title}</h5>
         </a>
       </Link>
     </Box>

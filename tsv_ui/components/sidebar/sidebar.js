@@ -7,7 +7,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { ArticleThumbnail } from "../articlePreviews/articleThumbnail";
-import { titles } from '../articleGrid/articleGrid';
+import { titles } from "../articleGrid/articleGrid";
 
 const useStyles = makeStyles({
   root: {
@@ -20,10 +20,10 @@ const useStyles = makeStyles({
   },
   subHeadings: {
     textAlign: "left",
-    marginLeft: "5%",    
+    marginLeft: "5%",
     "& h2": {
-        borderBottom: '5px solid orange'
-    }
+      borderBottom: "5px solid orange",
+    },
   },
 });
 
@@ -31,21 +31,29 @@ export const Sidebar = () => {
   const styles = useStyles();
   const centeredStyling = { margin: "3% 5% 0 5%", textAlign: "center" };
 
-  const mustReadArticles = titles.slice(0,4).map((article) => {
+  const mustReadArticles = titles.slice(0, 4).map((article) => {
     return (
-      <Grid item key={article} xs={12} sm={6} style={{ marginRight: "-25px" }}>
-        <ArticleThumbnail title={article} image="/stoat.jpg" isVertical={true}/>
+      // <Grid item key={article} xs={6} sm={6} style={{ marginRight: "-25px" }}>
+      <Grid item key={article} xs={6}>
+        <ArticleThumbnail
+          title={article}
+          image="/stoat.jpg"
+          isVertical={true}
+        />
       </Grid>
     );
   });
-  const dontMissArticles = titles.slice(5,11).map((article) => {
+  const dontMissArticles = titles.slice(5, 11).map((article) => {
     return (
-      <Grid item key={article} xs={12} sm={6} style={{ marginRight: "-25px" }}>
-        <ArticleThumbnail title={article} image="/stoat.jpg" isVertical={false}/>
+      <Grid item key={article} xs={12} style={{ marginRight: "-25px" }}>
+        <ArticleThumbnail
+          title={article}
+          image="/stoat.jpg"
+          isVertical={false}
+        />
       </Grid>
     );
   });
-
 
   return (
     <Box classes={{ root: styles.root }}>
@@ -78,15 +86,17 @@ export const Sidebar = () => {
           <Grid item xs={12}>
             <div className={styles.subHeadings}>
               <h2>Must Read</h2>
-              <Grid item>
+              <Grid item xs={12} className="hello">
+                <Grid container spacing={2}>
                 {mustReadArticles}
+                </Grid>
               </Grid>
             </div>
           </Grid>
           <Grid item xs={12}>
             <div className={styles.subHeadings}>
               <h2>Don't Miss</h2>
-              <Grid item>
+              <Grid item xs={6}>
                 {dontMissArticles}
               </Grid>
             </div>
