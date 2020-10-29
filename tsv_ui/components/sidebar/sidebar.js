@@ -45,7 +45,7 @@ export const Sidebar = () => {
   });
   const dontMissArticles = titles.slice(5, 11).map((article) => {
     return (
-      <Grid item key={article} xs={12} style={{ marginRight: "-25px" }}>
+      <Grid item key={article} xs={12}>
         <ArticleThumbnail
           title={article}
           image="/stoat.jpg"
@@ -96,7 +96,7 @@ export const Sidebar = () => {
           <Grid item xs={12}>
             <div className={styles.subHeadings}>
               <h2>Don't Miss</h2>
-              <Grid item xs={6}>
+              <Grid item xs={12}>
                 {dontMissArticles}
               </Grid>
             </div>
